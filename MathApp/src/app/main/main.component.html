@@ -1,0 +1,25 @@
+
+<app-nav-bar></app-nav-bar>
+<app-caresoul></app-caresoul>
+<div class="container">
+    <h2 class="text-center my-5 font text-primary"> برجاء إختيار نوع العملية الحسابية المراد التدريب عليها </h2>
+
+    <div class="row h-100 justify-content-around">
+        <div [routerLink]="['/plus']" routerLinkActive="router-link-active"  class="my-5 col-lg-5 col-xs-12 text-center p-5 plus">
+            <i class="text-light fa fa-5x fa-plus-square"></i>
+        </div>
+
+        <div [routerLink]="['/minus']" class="my-5 col-lg-5 text-center col-xs-12 p-5 minus">
+            <i class="text-light fa fa-5x fa-minus-square"></i>
+        </div>
+        
+        
+        <div [routerLink]="['/multiply']" class="my-5 col-lg-5 col-xs-12 p-5 text-center multiply">
+            <i class="text-light fa fa-5x fa-times"></i>
+        </div>
+        
+        <div [routerLink]="['/divide']" class="my-5 col-lg-5 col-xs-12 p-5 text-center division">
+            <i class="text-light fa fa-5x divide"> &#247;</i>
+        </div>
+    </div>
+</div>

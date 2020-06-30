@@ -1,0 +1,39 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="container">
+    <div class="Question mx-auto text-center my-5">
+        <h1 class="my-5 mx-auto font text-secondary">التدريب علي عمليات زائد</h1>
+        <span class="num1 m-5 font text-primary">{{num1}}</span>
+        <span class="operator m-5 font text-warning">&#247;</span>
+        <span class="num2 m-5 font text-primary">{{num2}}</span>
+
+        <input #input dir="rtl" class="text-center" type="text" placeholder="ادخل إجابتك هنا" class="mx-auto my-5">
+        <div class="row my-5 h-100 justify-content-around">
+            <div class="col-3 my-auto">
+
+                <button class="btn btn-block btn-lg btn-secondary mx-auto" (click) = "changeNumber();">التالي</button>
+
+
+            </div>
+            <div class="col-3 my-auto">
+                <button class="btn btn-lg btn-block btn-success mx-auto" (click)="check(input)">تسجيل</button>
+            </div>
+        </div>
+        <div class="row h-100">
+
+            <div *ngIf="notNumber" class="bg-{{color}}  bg text-center text-light font my-auto">
+                <h1 class="my-auto py-3">{{message}}</h1>
+            </div>
+
+            <div *ngIf="rightAnswer" class="bg-{{color}}  bg text-center text-light font my-auto">
+                <h1 class="my-auto py-3">{{message}}</h1>
+            </div>
+
+            <div *ngIf="!rightAnswer" class="bg-{{color}}  bg text-center text-light font my-auto">
+                <h1 class="my-auto py-3">{{message}}</h1>
+            </div>
+
+
+        </div>
+    </div>
+</div>

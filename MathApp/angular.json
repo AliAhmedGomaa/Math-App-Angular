@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "MathApp": {
+    "Math-App": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/MathApp",
+            "outputPath": "dist/Math-App",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,9 +28,15 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/font-awesome/css/font-awesome.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/popper.js/dist/umd/popper.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+            ]
           },
           "configurations": {
             "production": {
@@ -66,18 +72,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "MathApp:build"
+            "browserTarget": "Math-App:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "MathApp:build:production"
+              "browserTarget": "Math-App:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "MathApp:build"
+            "browserTarget": "Math-App:build"
           }
         },
         "test": {
@@ -114,15 +120,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "MathApp:serve"
+            "devServerTarget": "Math-App:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "MathApp:serve:production"
+              "devServerTarget": "Math-App:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "MathApp"
+    }
+  },
+  "defaultProject": "Math-App",
+  "cli": {
+    "analytics": "66157b8b-7323-4b51-8436-587c11da6b3e"
+  }
 }

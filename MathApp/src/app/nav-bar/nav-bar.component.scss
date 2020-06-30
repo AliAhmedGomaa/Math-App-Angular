@@ -1,0 +1,19 @@
+nav {
+    direction: rtl;
+}
+
+li :hover {
+    border-bottom: 2px solid blue;
+}
+
+a :hover {
+    border-bottom: none;
+}
+
+.text-primary {
+    cursor: pointer;
+}
+
+.navbar {
+    background-color: transparent !important;
+}
